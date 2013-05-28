@@ -1,0 +1,64 @@
+---
+layout: post
+title: Installing the Braintree Payment Solution
+tags:
+- Braintree
+- programming
+- Programming
+- rails
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  dsq_thread_id: '542862777'
+---
+I wanted to learn how to use the Braintree gem and payment solution so we installed it today on <a href="https://twitter.com/#!/daveande">@daveande</a>'s project, SendFive. This post will walk you through the steps that we took to get it working. Full disclosure: the app was already set up to use Stripe, and we didn't use TDD. Here's the code for the app: <a href="https://github.com/jvbahnik/send_five">https://github.com/jvbahnik/send_five</a>.
+
+First step is to sign up to get access to Braintree's sandbox at <a href="http://www.braintreepayments.com/gateway">http://www.braintreepayments.com/gateway</a>. I was granted access within a couple of hours on a late Friday afternoon, very quick turnaround.
+
+Next, we added the <a href="http://rubygems.org/gems/braintree">Braintree gem</a> to our gemfile and ran bundle install.
+
+Once that was done, we created a file config/initializer/braintree.rb in our project. We set merchant_id, public_key and private_key as environment variables and pasted this code in our file:
+<pre>Braintree::Configuration.environment = :sandbox
+Braintree::Configuration.merchant_id = ENV['braintree_MERCHANT_ID']
+Braintree::Configuration.public_key = ENV['braintree_PUBLIC_KEY']
+Braintree::Configuration.private_key = ENV['braintree_PRIVATE_KEY']</pre>
+I say pasted because Braintree has this neat little tool in the sandbox dashboard where you select your language of choice, hit copy and your variables are ready to be pasted.
+
+<a href="http://jeanbahnik.com/wp-content/uploads/2012/01/braintree_copy.png"><img class="wp-image-129 alignnone" title="braintree_copy" alt="" src="http://jeanbahnik.com/wp-content/uploads/2012/01/braintree_copy.png" width="598" height="132" /></a>
+
+We removed the Stripe code from our controller. Eventually we wouldn't be using that method anymore and instead point the redirect to a new method called confirm, but more on that later. We actually didn't have to add any code to the method that included the code for Stripe. Instead of having form action point to the method in the gifts controller, we pointed the form action to Braintree. That also meant reworking our methods since the old method included sending the SMS and an email confirmation. But all we need to do to fix that was move whatever we wanted to keep to the new confirm method.
+
+Once that was done, we changed the form action to:
+<pre>&lt;%= form_tag Braintree::TransparentRedirect.url do %&gt;</pre>
+We modified our payment form to include the following:
+<pre>&lt;%= hidden_field_tag :tr_data, Braintree::TransparentRedirect.transaction_data(
+:redirect_url =&gt; confirm_url,
+:transaction =&gt; {
+:type =&gt; "sale",
+:amount =&gt; "5.99",
+:options =&gt; {:submit_for_settlement =&gt; true}
+}
+) %&gt;</pre>
+We also changed the name of our credit card and expiration date fields:
+<pre>&lt;%= text_field_tag :card_number, nil, :name =&gt; "<strong>transaction[credit_card][number]</strong>", :placeholder =&gt; "Credit Card Number", :maxlength =&gt; 16, :size =&gt; 20 %&gt;
+&lt;%= text_field_tag :card_expiration, nil, :name =&gt; "<strong>transaction[credit_card][expiration_date]</strong>", :placeholder =&gt; "MM/YY", :maxlength =&gt; 5, :size =&gt; 5 %&gt;</pre>
+Our amount is always $5.99 so for now we hard-coded it. For more on submit_for_settlement check out the Braintree <a href="http://www.braintreepayments.com/docs/ruby/transactions/submit_for_settlement">documentation</a>. For :redirect_url =&gt; confirm_url to work we added a new method in our controller:
+<pre>def confirm
+@result = Braintree::TransparentRedirect.confirm(request.query_string)
+if @result.success?
+redirect_to new_user_url
+else
+redirect_to root_url
+end
+end</pre>
+It'll check the query string from the URL on the Redirect and look for success. We also needed a new route for our confirm method:
+<pre>match '/confirm' =&gt; 'gifts#confirm', :as =&gt; :confirm</pre>
+And that's it! To test it, we used the Braintree <a href="http://www.braintreepayments.com/docs/ruby/reference/sandbox">sandbox reference guide</a> for credit card numbers and CCVs. You can test various credit card types and simulate a lot of different errors as well.
+
+This article still needs work but I was so excited about how easy and quick it was to get Braintree on the site that I wanted to share it quickly. I'll update it soon, I promise.
+
+Let me know what you think in the comments below!
+
+<strong>Update 1/17/12</strong>: great related blog post that include testing using Cucumber at <a href="http://enlightsolutions.com/articles/integration-testing-braintrees-transparent-redirect-with-rails-and-cucumber">http://enlightsolutions.com/articles/integration-testing-braintrees-transparent-redirect-with-rails-and-cucumber</a>

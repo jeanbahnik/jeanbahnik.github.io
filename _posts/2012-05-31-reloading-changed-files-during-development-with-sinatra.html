@@ -1,0 +1,33 @@
+---
+layout: post
+title: Reloading changed files during development with Sinatra
+tags:
+- Programming
+- sinatra
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  dsq_thread_id: '709596139'
+---
+While developing Sinatra applications, to reload changed files I've been stopping the server (<em>Ctrl C</em>) and restarting it (<em>Rackup</em>), wasting precious time with every change. Today I finally went ahead and added the Reloader extension. Here is how:
+
+Install the gem on your machine (I didn't add it to the Gemfile since I don't need it on production):
+<pre>$ gem install sinatra-contrib</pre>
+For the simple wedding website that I am working on, a classic Sinatra application, I'm simply requiring it through:
+<pre>require "sinatra/reloader" if development?</pre>
+For the modular application that I'm building at work, I added the following code to require it:
+<pre>require "sinatra/reloader"
+
+class MyApp &lt; Sinatra::Base
+  configure :development do
+    register Sinatra::Reloader
+  end
+end</pre>
+That's it! Either application will now reload the changed files with every incoming request. If you need to restart the HTTP server on every request check out <a href="http://rtomayko.github.com/shotgun/">shotgun</a>.
+
+Sources:
+What happened to reloading in Sinatra 0.9.2?: <a href="http://www.sinatrarb.com/faq.html#reloading">http://www.sinatrarb.com/faq.html#reloading</a>
+Sinatra::Reloader: <a href="http://www.sinatrarb.com/contrib/reloader">http://www.sinatrarb.com/contrib/reloader
+</a>Shotgun: <a href="http://rtomayko.github.com/shotgun/">http://rtomayko.github.com/shotgun/</a>

@@ -1,0 +1,148 @@
+---
+layout: post
+title: MongoDB Chicago Conference
+tags:
+- Programming
+status: draft
+type: post
+published: false
+meta:
+  _edit_last: '1'
+---
+ADD: photos, links to presentations, comments &amp; final notes.
+
+Why I signed up (offer, program, one day), how much it cost, where is it, more info?
+
+&nbsp;
+
+<strong>9:10</strong> Leaving the office after an early arrival to the office (thanks C)
+
+<strong>9:20</strong> Registered. Got name tag, field notes, nice mongo cheat sheet booklet, invite to after-party and schedule for the day
+
+There's a nice breakfast buffet. I should have thought about that and saved a bowl of Qix...
+
+<strong>9:30</strong> On to the welcome talk, a quick 10 minute overview of MongoDB, 10gen, their progress and the conference.
+
+On may way out I grab a t-shirt, a mug and the necessary stickers to (not) put on my laptop. Weird that they only have size Ss, this is an engineer conference after all.
+
+<strong>10:00</strong> Jenna deBoisblanc again, doing the first talk. Building your first app with MongoDB.
+
+What I'm learning:
+
+The document that Mongo stores is a JSON object.
+
+She's funny, the crowd is asleep though.
+
+to research: full support for primary and secondary indexes, horizontally scalable
+
+I need to get the slides.
+
+Mongo has a shell written in javascript.
+
+Time to empty my cup: comparing with RDBMS
+
+Moving on to apartment app
+
+Insert is simply done with a flexible JSON object
+
+Embending documents is possible by using the _id index.
+
+Querying is also simple once you know the operators. You can also query with regex.
+
+You can use update a schema using the set operator.
+
+paging your results is done in a pretty cool way
+
+Introducing next chats. Need to look for indexing @ 11:40 and replication at 1:55pm to answer Mike's questions.
+
+People are asking about GUI for Mongo. Best option seems to be Mongovue... for Windows.
+
+<strong>10:30</strong> Done.
+
+<strong>10:45</strong> Schema Design with MongoDB by Chad Tindel form 10gen
+
+Why Mongo: faster to access data, saving resources on joins
+
+You need to think about how  you're going to access your data (slide)
+
+Interesting to see how to do relations. Simple and intuitive. He's also showing us what not to do, like having a document that keeps on growing.
+
+Talking about Links: need to look more into it.
+
+Nice conditional updates through findAndModify
+
+<strong>11:10</strong> Questions
+
+<strong>11:20</strong> Done
+
+Snagged a second delicious yogurt parfait.
+
+<strong>11:40</strong> Indexing and Query Optimization by Richard Kreuter
+
+Indexing is the most tunable performance optimization in Mongo
+
+Indexing is simple, can be ordered asc or desc
+
+You can do an index on an array (inverted index), index a nested document, can do compound index on 2 fields.
+
+You can list index (slide)
+
+All indexes (primary and secondary) points to the exact location of documents (and not the location through the primary key)
+
+You can make indexes unique.
+
+There are some limitations (slides)
+
+You can profile slow ops (slide), it has a Query Optimizer that works in an empirical fashion
+
+We ran out of time :-(
+
+<strong>12:25</strong> Done
+
+12:25 Corey!
+
+Did great, photos, link to slides
+
+<strong>1:00</strong> Done, talking to people
+
+<strong>1:20</strong> lunch
+
+<strong>1:45</strong> CoD Black Ops 2!
+
+<strong>2:00</strong> Replication
+
+How to avoid failures, improve lately issues
+
+3 nodes, 2 with data (Primary and Secondary) and an Arbiter node
+
+Great real-life explanation of primary and secondary nodes use
+
+Kinda lost with read preferences
+
+&nbsp;
+
+<strong>2:45</strong> MongoDB for analytics
+
+data freak, great intro story about saving stats while playing NES game
+
+inserts anecdotes about himself in talk, like "never saw Star Wars"
+
+talks about growing and scaling
+
+<strong>3:20</strong> Done. Great talk by @jnunemaker
+
+<strong>3:35</strong> Schema documentation and design using a Mind Map
+
+<strong>4:15</strong> Done
+
+&nbsp;
+
+Questions from Mike:
+
+How does indexing work with Mongo?
+
+How does eventual consistency work?
+
+write to primary, then propagate to secondary, then reads Driver
+
+How do you observe Mongo models?

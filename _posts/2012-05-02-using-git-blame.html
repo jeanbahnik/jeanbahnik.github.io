@@ -1,0 +1,42 @@
+---
+layout: post
+title: Using git blame
+tags:
+- git
+- Programming
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  dsq_thread_id: '722001469'
+---
+Another nice trick from <a href="https://twitter.com/#!/fablednet">Sarah Grey</a>: git blame. We were looking for the author of a strange code change that broke one of our tests. Git blame allows you to find easily who made what change in your terminal:
+<pre>git blame file</pre>
+There are more options available:
+<pre>usage: git blame [options] [rev-opts] [rev] [--] file</pre>
+--incremental Show blame entries as we find them, incrementally
+-b Show blank SHA-1 for boundary commits (Default: off)
+--root Do not treat root commits as boundaries (Default: off)
+--show-stats Show work cost statistics
+--score-debug Show output score for blame entries
+-f, --show-name Show original filename (Default: auto)
+-n, --show-number Show original linenumber (Default: off)
+-p, --porcelain Show in a format designed for machine consumption
+-c Use the same output mode as git-annotate (Default: off)
+-t Show raw timestamp (Default: off)
+-l Show long commit SHA1 (Default: off)
+-s Suppress author name and timestamp (Default: off)
+-e, --show-email Show author email instead of name (Default: off)
+-w Ignore whitespace differences
+-S &lt;file&gt; Use revisions from &lt;file&gt; instead of calling git-rev-list
+--contents &lt;file&gt; Use &lt;file&gt;'s contents as the final image
+-C[&lt;score&gt;] Find line copies within and across files
+-M[&lt;score&gt;] Find line movements within and across files
+-L &lt;n,m&gt; Process only line range n,m, counting from 1
+
+Here is an example that shows my recent changes to a Gemfile:
+
+<a href="http://jeanbahnik.com/wp-content/uploads/2012/05/Screen-Shot-2012-06-11-at-6.29.08-PM.png"><img class="aligncenter size-full wp-image-342" title="Git blame example" src="http://jeanbahnik.com/wp-content/uploads/2012/05/Screen-Shot-2012-06-11-at-6.29.08-PM.png" alt="Git blame example" width="704" height="458" /></a>
+
+&nbsp;

@@ -1,0 +1,20 @@
+---
+layout: post
+title: How to permanently change the soft tabbing in Textmate 2
+tags:
+- Programming
+- textmate2
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  dsq_thread_id: '708739325'
+---
+So far I've been happy with TextMate 2 but one thing that has been really bothering me: having to change the indent type and size every time I open a Haml file. A lot of blog posts and Stack Overflow response mention the drop-down at the bottom of the window but I was looking for a permanent solution. So here is how to fix it once and for all:
+
+From the terminal run, assuming TextMate is installed in the Applications folder:
+<pre><code>mate ~/../../Applications/TextMate.app/Contents/Resources/Default.tmProperties</code></pre>
+Then add the following lines:
+<pre><code>[ "*.{haml,yml,coffee,feature}" ] </code>softTabs = true
+tabSize = 2</pre>
