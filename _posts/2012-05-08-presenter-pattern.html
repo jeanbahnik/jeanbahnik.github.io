@@ -17,11 +17,11 @@ meta:
   _wp_old_slug: presenter-patterns
 ---
 I have to admit that I haven't had a chance to implement a presenter but I am very intrigued by it after reading Jay Field's <a href="http://blog.jayfields.com/2007/03/rails-presenter-pattern.html">excellent article from 2007</a> on it.
-
+<br/>
 The presenter pattern strays from the Rails standard MVC framework. It creates a class representation of the view to simplify bloated controllers. Normally controllers (C) should present the data on the view (V) after pulling the data from the model (M). However, this can sometimes create overloaded controllers or even views that do some logic work that should belong in a controller or a model.
-
+<br/>
 The presenter pattern offers an elegant solution to this by aggregating the data for the view:
-
+<br/>
 From Jay Field's example (until I can add my own):
 <pre>class CompletePresenter &lt; Presenter
  def_delegators :user_account, :name, :name=
@@ -50,5 +50,5 @@ Thanks to this presenter, the controller becomes very light and simple:
  end
 end</pre>
 I'm sure I can find a use for this and can't wait to try it. I'll update this post when I do.
-
+<br/>
 I highly recommend reading <a href="http://kpumuk.info/ruby-on-rails/simplifying-your-ruby-on-rails-code/">Dmytro Shteflyuk's article</a>. It also mentions cells plugins, just as interesting. Let me know what you think!

@@ -14,18 +14,18 @@ meta:
   _wp_old_slug: using-sql-inject-method
 ---
 I have been working on creating dashboards for the past week and got learn how to use Ruby's inject method to get column totals.
-
+<br/>
 Normally I would try to get the sum through sql, putting the work load on the database instead of my application. But in this case I'm going to take the data that I'm getting for each row and add it up to get the total.
-
+<br/>
 Per apidock.com's <a href="http://apidock.com/ruby/Enumerable/inject">documentation</a>:
-
+<br/>
 <em>Combines all elements of enum by applying a binary operation, specified by a block or a symbol that names a method or operator.</em>
 <pre>(5..10).<a href="http://apidock.com/ruby/Enumerable/inject">inject</a> {|sum, n| sum + n }
 #=&gt; 45</pre>
 How I'm using it:
 <pre>@column_total = @each_row.inject(0){|sum, n| n.subtotal + sum }</pre>
 In this case, sum is set to zero through inject(0) then each number of my array will be combined to give me the total.
-
+<br/>
 It's very flexible and you can certainly manipulate it further. Include a turnary condition to check if one of the value is blank:
 <pre>@column_total = @each_row.inject(0){|sum, n| ((n.discount.blank? || n.discount == 0) ? 0 : n.discount) + sum }.to_f</pre>
 Or do some calculations within the inject:

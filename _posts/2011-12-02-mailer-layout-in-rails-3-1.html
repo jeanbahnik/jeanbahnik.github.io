@@ -12,17 +12,17 @@ meta:
   dsq_thread_id: '491224130'
 ---
 You can use a layout for your emails just like the layout file for your website. I just implemented it to keep the look of <a href="http://utellmewhen.com">utellmewhen</a>'s emails clean and consistant.
-
+<br/>
 Here is the link to the Ruby Guide on it: <a href="http://guides.rubyonrails.org/action_mailer_basics.html#action-mailer-layouts">http://guides.rubyonrails.org/action_mailer_basics.html#action-mailer-layouts</a>.
-
+<br/>
 I first created my email in html, sticking with tables to format the email over divs. I included the css styling into the elements, not in a header.
-
+<br/>
 Then I saved the file as user_mailer.html.erb in the views/layouts folder. I initially saved it in my views/user_mailer by mistake. Make sure you put the layout... in the layouts folder.
-
+<br/>
 Then I put &lt;%= yield %&gt; in my layout file and that was it.
-
+<br/>
 You can also override the layout that you use with:
 <pre>class UserMailer &lt; ActionMailer::Base
   layout 'awesome' # use awesome.(html|text).erb as the layout
-end</pre>
+end</pre><br/>
 Hope this helps.
