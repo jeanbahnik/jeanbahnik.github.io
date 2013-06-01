@@ -26,8 +26,6 @@ Braintree::Configuration.public_key = ENV['braintree_PUBLIC_KEY']
 Braintree::Configuration.private_key = ENV['braintree_PRIVATE_KEY']</pre>
 I say pasted because Braintree has this neat little tool in the sandbox dashboard where you select your language of choice, hit copy and your variables are ready to be pasted.
 
-<a href="http://jeanbahnik.com/wp-content/uploads/2012/01/braintree_copy.png"><img class="wp-image-129 alignnone" title="braintree_copy" alt="" src="http://jeanbahnik.com/wp-content/uploads/2012/01/braintree_copy.png" width="598" height="132" /></a>
-
 We removed the Stripe code from our controller. Eventually we wouldn't be using that method anymore and instead point the redirect to a new method called confirm, but more on that later. We actually didn't have to add any code to the method that included the code for Stripe. Instead of having form action point to the method in the gifts controller, we pointed the form action to Braintree. That also meant reworking our methods since the old method included sending the SMS and an email confirmation. But all we need to do to fix that was move whatever we wanted to keep to the new confirm method.
 
 Once that was done, we changed the form action to:
