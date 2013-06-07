@@ -14,21 +14,27 @@ meta:
   dsq_thread_id: '725788553'
 ---
 I was looking at our Gemfile at work today and noticed that we were not using the :assets group that is in the default Gemfile. When you create a new Rails application, that group will look like this:
-<pre>group :assets do
- gem 'sass-rails', '~&gt; 3.2.3'
- gem 'coffee-rails', '~&gt; 3.2.1'
- gem 'uglifier', '&gt;= 1.0.3'
-end</pre>
+{% highlight ruby %}
+group :assets do
+ gem 'sass-rails', '~> 3.2.3'
+ gem 'coffee-rails', '~> 3.2.1'
+ gem 'uglifier', '>= 1.0.3'
+end
+{% endhighlight %}
 A quick search helped me understand the purpose of this :assets group: it basically acts as a shortcut for other groups based on what you set in your config/application.rb file:
-<pre>if defined?(Bundler)
+{% highlight ruby %}
+if defined?(Bundler)
  # If you precompile assets before deploying to production, use this line
- # Bundler.require(*Rails.groups(:assets =&gt; %w(development test staging)))
+ # Bundler.require(*Rails.groups(:assets => %w(development test staging)))
  # If you want your assets lazily compiled in production, use this line
  Bundler.require(:default, :assets, Rails.env)
-end</pre>
+end
+{% endhighlight %}
 Because I didn't need the convenience of the assets group, I can comment out line 3 and uncomment line 5. Then I move the gems out of the assets group and delete that group. It helps me keep my Gemfile clean and allows me to organize it more freely. I usually group gems that do not belong to a specific group based on their role: # carrierwave, # front end, # authentication, etc. For example:
-<pre># mongo
+{% highlight ruby %}
+# mongo
 gem 'bson_ext', '1.6.1'
-gem 'mongo', '&gt;= 1.4.0'
-gem 'mongoid', '2.4.7'</pre>
+gem 'mongo', '>= 1.4.0'
+gem 'mongoid', '2.4.7'
+{% endhighlight %}
 Source: <a href="http://stackoverflow.com/questions/7351607/how-is-the-assets-group-in-rails-3-1-handled-by-bundler">http://stackoverflow.com/questions/7351607/how-is-the-assets-group-in-rails-3-1-handled-by-bundler</a>
