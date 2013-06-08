@@ -10,16 +10,11 @@
 
   <div id="main">
 
-    <header>
-      <h1> Jean Bahnik </h1>
-      {% if page.title %}<h2>{{ page.title }}</h2>{% endif %}
-    <header>
+    {% include header.html %}
 
     {{ content }}
 
-    <footer>
-      <p>Jean Bahnik | All Rights Reserved. </p>
-    </footer>
+    {% include footer.html %}
 
   </div>
 </body>
