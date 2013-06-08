@@ -11,26 +11,23 @@ meta:
   _edit_last: '1'
   dsq_thread_id: '722001469'
 ---
-Another nice trick from <a href="https://twitter.com/#!/fablednet">Sarah Gray</a>: git blame. We were looking for the author of a strange code change that broke one of our tests. Git blame allows you to find easily who made what change in your terminal:
-<pre>git blame file</pre>
+I was looking for the author of a strange code change that broke one of our tests. Git blame allows you to find easily who made what change in your terminal:
+{% highlight shell-session %}git blame filename{% endhighlight %}
 There are more options available:
-<pre>usage: git blame [options] [rev-opts] [rev] [--] file</pre>
---incremental Show blame entries as we find them, incrementally
--b Show blank SHA-1 for boundary commits (Default: off)
---root Do not treat root commits as boundaries (Default: off)
---show-stats Show work cost statistics
---score-debug Show output score for blame entries
--f, --show-name Show original filename (Default: auto)
--n, --show-number Show original linenumber (Default: off)
--p, --porcelain Show in a format designed for machine consumption
--c Use the same output mode as git-annotate (Default: off)
--t Show raw timestamp (Default: off)
--l Show long commit SHA1 (Default: off)
--s Suppress author name and timestamp (Default: off)
--e, --show-email Show author email instead of name (Default: off)
--w Ignore whitespace differences
--S &lt;file&gt; Use revisions from &lt;file&gt; instead of calling git-rev-list
---contents &lt;file&gt; Use &lt;file&gt;'s contents as the final image
--C[&lt;score&gt;] Find line copies within and across files
--M[&lt;score&gt;] Find line movements within and across files
--L &lt;n,m&gt; Process only line range n,m, counting from 1
+{% highlight shell-session %}usage: git blame [options] [rev-opts] [rev] [--] filename{% endhighlight %}
+--incremental Show blame entries as we find them, incrementally<br/>
+-b Show blank SHA-1 for boundary commits (Default: off)<br/>
+--root Do not treat root commits as boundaries (Default: off)<br/>
+--show-stats Show work cost statistics<br/>
+--score-debug Show output score for blame entries<br/>
+-f, --show-name Show original filename (Default: auto)<br/>
+-n, --show-number Show original linenumber (Default: off)<br/>
+-p, --porcelain Show in a format designed for machine consumption<br/>
+-c Use the same output mode as git-annotate (Default: off)<br/>
+-t Show raw timestamp (Default: off)<br/>
+-l Show long commit SHA1 (Default: off)<br/>
+-s Suppress author name and timestamp (Default: off)<br/>
+-e, --show-email Show author email instead of name (Default: off)<br/>
+-w Ignore whitespace differences<br/>
+<br/>
+Here is the whole <a href="https://www.kernel.org/pub/software/scm/git/docs/git-blame.html">list of options</a> for git blame.
