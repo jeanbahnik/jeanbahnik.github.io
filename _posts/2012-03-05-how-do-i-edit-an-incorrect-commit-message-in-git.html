@@ -12,17 +12,19 @@ meta:
   dsq_thread_id: '708589074'
 ---
 Today I wrote an incorrect Git commit message and had to fix it before pushing to the repository. Here is how to do it:
-<pre><code>git commit --amend -m "New commit message"</code></pre>
+{% highlight shell-session %}
+git commit --amend -m "New commit message"{% endhighlight %}
 Example:
-<pre><code>git commit -am "Fixed the mtd report to work on the first day of the motnh"
+{% highlight shell-session %}
+git commit -am "Fixed the mtd report to work on the first day of the motnh"
 [hotfix-1.27.2.0 4c45371] Fixed the mtd report to work on the first day of the motnh
 3 files changed, 38 insertions(+), 18 deletions(-)
-<br/>
+
 git commit --amend -m "Fixed the mtd report to work on the first day of the month"
 [hotfix-1.27.2.0 98680c8] Fixed the mtd report to work on the first day of the month
 3 files changed, 38 insertions(+), 18 deletions(-)
-<br/>
-git push origin hotfix-1.27.2.0</code></pre>
+
+git push origin hotfix-1.27.2.0{% endhighlight %}
 This should only be done if you haven't pushed to the repository yet.
-<br/>
+<br/><br/>
 Source: <a href="http://stackoverflow.com/questions/179123/how-do-i-edit-an-incorrect-commit-message-in-git">http://stackoverflow.com/questions/179123/how-do-i-edit-an-incorrect-commit-message-in-git</a>
