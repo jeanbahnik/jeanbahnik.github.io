@@ -18,8 +18,14 @@ footer {
   margin-top: 40px;
 }
 
-.full_blog_link {
+.center {
   text-align: center;
-  font-size: 1.5em;
+}
+
+.no_underline {
   text-decoration: none;
+}
+
+.big {
+  font-size: 1.5em;
 }
