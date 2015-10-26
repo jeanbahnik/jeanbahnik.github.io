@@ -1,2 +1,11 @@
 pygments: true
 markdown: kramdown
+## Setup
+title:            Jean Bahnik
+tagline:          "Another blog"
+description:      "Jean Bahnik's blog."
+url:              http://jeanbahnik.com
+## Navigation
+pages_list:
+  About: '/about'
+  Resume: '/resume'
