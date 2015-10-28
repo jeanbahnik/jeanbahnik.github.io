@@ -18,6 +18,14 @@ footer {
   margin-top: 40px;
 }
 
+.nav-link {
+  text-decoration: none;
+  color: #505050;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 .center {
   text-align: center;
 }
