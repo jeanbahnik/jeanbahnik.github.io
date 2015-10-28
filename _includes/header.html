@@ -3,10 +3,10 @@
   <!-- <a href="{{ site.url }}"><img src="{{ site.url }}/assets/images/smile100.jpg" alt="" width="100" height="100" class="circular"></a> -->
   <!-- <h1>Jean Bahnik - Blog - About - Resume</h1> -->
   <h3 class="masthead-title">
-    <a href="/" title="Home">{{ site.title }}</a>
+    <a href="/" title="Home" class="nav-link">{{ site.title }}</a>
     {% for page in site.pages_list %}
       &nbsp;&nbsp;&nbsp;
-      <small><a href="{{ page[1]  }}">{{ page[0] }}</a></small>
+      <small><a href="{{ page[1]  }}" class="nav-link">{{ page[0] }}</a></small>
     {% endfor %}
   </h3>
   {% if page.title %}<h2>{{ page.title }}</h2>{% endif %}
