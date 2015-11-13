@@ -7,7 +7,7 @@ description:      "Jean Bahnik's blog."
 url:              http://jeanbahnik.com
 ## Navigation
 pages_list:
-  Blog: '/'
-  About Me: '/about'
+  Blog: '/blog'
+  About Me: '/'
   Running: '/running'
   # Resume: '/resume'
