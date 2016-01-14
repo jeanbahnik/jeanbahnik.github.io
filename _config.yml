@@ -1,13 +1,15 @@
-pygments: true
+# Site settings
+title: Jean Bahnik
+email: jeanbahnik@gmail.com
+baseurl: ""
+url: "http://jeanbahnik.com"
+twitter_username: jeanbahnik
+github_username:  jeanbahnik
+# dribbble_username: MTTHWBSH
+linkedin_username: jeanbahnik
+
+# Build settings
 markdown: kramdown
-## Setup
-title:            Jean Bahnik
-tagline:          "Another blog"
-description:      "Jean Bahnik's blog."
-url:              http://jeanbahnik.com
-## Navigation
-pages_list:
-  Blog: '/blog'
-  About Me: '/'
-  Running: '/running'
-  # Resume: '/resume'
+sass:
+    style: :compressed
+    sass_dir: _sass
