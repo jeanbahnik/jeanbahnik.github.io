@@ -1,14 +1,18 @@
 ---
 layout: post
-permalink: /trunkclub/
-title: 'Trunk Club'
+permalink: /gearedtorun/
+title: 'Geared to Run'
 author: jeanbahnik
-excerpt: Various projects contributed to since joining the Trunk Club Engineering team as a software engineer in February, 2012
-thumbnail: /assets/images/thumbnail.png
+excerpt: An iOS app that helps you pick the best running gear for the current weather.
+thumbnail: /assets/images/gtr-thumbnail.png # 1000x850, device 750 high
 categories:
   - Portfolio
 ---
 [**trunkclub.com/engineering**][link1]
+
+Since joining the Trunk Club Engineering team in February 2011, I've traversed the design and engineering gamut ranging from product discovery / design to application development. Though business needs required my role to be a bit of a generalist at times, my focus for most projects is on product / interface design and UI engineering for web and iOS applications. These projects span a period ranging from a small tech team within a sole Chicago headquarters to working with dozens of world class engineers for [offices across the nation][link3] (not to mention [being acquired][link2]).
+
+_Note: For some examples throughout this post sensitive business information has been removed_
 
 _All of these experiences were the product of a team and reflect the state they were at during my active design/development. At Trunk Club we have a very iterative / test driven approach and each of these has been continually developed upon since._
 
@@ -47,12 +51,14 @@ After spending a lot of time on internal tools, I worked on the [Trunk Club iOS 
 
 <!-- Links -->
 [link1]:			https://trunkclub.com/engineering
+[link2]:			http://techcrunch.com/2014/07/31/nordstrom-acquires-mens-shopping-service-trunk-club/
+[link3]:			https://www.trunkclub.com/locations
 [link4]:			https://itunes.apple.com/us/app/trunk-club-mens-clothing-service/id635441999?mt=8
 
+
 <!-- Images -->
-<!-- 1600 x 1600 device 1300 high -->
-[image4]: 			/assets/images/stylist1.png
-[image5]: 			/assets/images/stylist2.png
+[image4]: 			/assets/images/gtr-preferences.png
+[image5]: 			/assets/images/gtr-gearlist.png
 [image6]: 			/assets/images/custom1.png
 [image7]: 			/assets/images/custom2.png
 [image8]: 			/assets/images/member-stylist.png
