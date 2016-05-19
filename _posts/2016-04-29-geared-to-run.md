@@ -14,7 +14,7 @@ categories:
 
 Download on the App Store (_Coming soon, email me to join the beta_)
 
-This app recommends a running outfit based on the weather of your current location. You can edit your gear to customize the recommendations. It uses Core Data with iCloud to save your gear, ForecastIO as the data source for weather. The views leverage UIStackView, UICollectionView and UITableView. It has one in-app purchase to remove ads and customize your gear.
+This app recommends a running outfit based on the weather of your current location. You can edit your gear to customize the recommendations. It uses Core Data with iCloud to save your gear, ForecastIO as the data source for weather. The views leverage UIStackView, UICollectionView and UITableView.
 
 ![Application screenshot][image4]
 ![Application screenshot][image5]
