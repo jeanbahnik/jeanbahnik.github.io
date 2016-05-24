@@ -12,7 +12,7 @@ categories:
 
 ### Geared to Run iOS App (Swift)
 
-Download on the App Store (_Coming soon, email me to join the beta_)
+[Download on the App Store][link4]
 
 This app recommends a running outfit based on the weather of your current location. You can edit your gear to customize the recommendations. It uses Core Data with iCloud to save your gear, ForecastIO as the data source for weather. The views leverage UIStackView, UICollectionView and UITableView.
 
