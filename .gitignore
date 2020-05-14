@@ -23,6 +23,9 @@ Thumbs.db
 # Project
 _site
 .sass-cache
+.jekyll-cache
+.jekyll-metadata
+vendor
 npm-debug.log
 node_modules/
 tmp/
