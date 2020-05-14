@@ -8,7 +8,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   My personal ramblings.
 email: jeanbahnik@gmail.com
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://jeanbahnik.com"
+url: "https://jeanbahnik.com"
 twitter_username: jeanbahnik
 github_username:  jeanbahnik
 linkedin_username: jeanbahnik
