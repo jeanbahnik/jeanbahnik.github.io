@@ -8,10 +8,6 @@ thumbnail: /assets/images/tc-member-thumbnail.png
 categories:
   - Portfolio
 ---
-<div class="spacer half"></div>
-
-### Member iOS App (Swift since 4.0, Objective-C before that)
-
 [Download on the App Store][link4]
 
 Starting with a complete rewrite in Swift (along with a new navigation/info architecture), a small team and I constantly iterated over different tests to produce features that allowed the member to stay more connected to their stylist and allow for more interaction with their wardrobe.
