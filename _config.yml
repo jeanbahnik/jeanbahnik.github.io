@@ -13,7 +13,7 @@ twitter_username: jeanbahnik
 github_username:  jeanbahnik
 linkedin_username: jeanbahnik
 logo: /assets/images/jean.jpg
-google_analytics: UA-21223630-1
+# google_analytics: UA-21223630-1
 
 # Build settings
 theme: jekyll-theme-so-simple
