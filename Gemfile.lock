@@ -95,6 +95,7 @@ DEPENDENCIES
   jekyll (~> 4.0.1)
   jekyll-feed (~> 0.12)
   jekyll-theme-so-simple
+  jekyll-watch
   tzinfo (~> 1.2)
   tzinfo-data
   wdm (~> 0.1.1)
