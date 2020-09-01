@@ -3,7 +3,7 @@ layout: post
 permalink: /communicate-and-connect-book/
 title: 'Communicate and Connect'
 author: jeanbahnik
-excerpt: Analogies to bridge the communication gap between engineering and the business.
+excerpt: Analogies and stories to help you bridge the communication gap between engineering teams and the business.
 # thumbnail:
 # categories:
 #   - Book
