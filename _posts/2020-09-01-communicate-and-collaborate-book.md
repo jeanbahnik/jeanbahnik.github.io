@@ -1,7 +1,7 @@
 ---
-layout: post
+layout: page
 permalink: /communicate-and-connect-book/
-title: 'Communicate and Connect'
+title: 'First, say hello'
 author: jeanbahnik
 excerpt: Analogies and stories to help you bridge the communication gap between engineering teams and the business.
 # thumbnail:
@@ -9,6 +9,17 @@ excerpt: Analogies and stories to help you bridge the communication gap between 
 #   - Book
 published: false
 ---
-Did you ever struggle to communicate the challenges of software development with the business? Did you ever wish for a cross-team project to run better through improved collaboration? Or did you ever wish to understand why working with an engineer could sometimes be so challenging?
+![cover](/assets/images/cover.png){: .align-right}
 
-{% include about-the-author.html %}
+*First, say hello* is a short book of analogies and stories from engineers that I'm writing to help you work with non-engineers. Learn from engineers and engineering leaders how to get your point across, how to convince stakeholders of your ideas. And finally get the business to agree to invest in that tech debt work or that architecture project you and your team need to tckle. Through analogies and stories of peers, you will learn to communicate the challenges of software development with the business, to deliver projects through better collaboration, and to build long-lasting relationships that will help your career.
+
+* **Get buy-in** for your ideas
+* Improve your **collaboration skills**
+* Help your team **deliver impactful projects**
+* Increase your **team's morale**
+* Be a **successful advocate for best engineers practices**
+* **Build long-lasting relationships** with PMs, designers and other stakeholders
+
+
+<!-- Images -->
+[cover-image]: /assets/images/cover.png
