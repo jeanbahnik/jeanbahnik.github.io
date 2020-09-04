@@ -5,8 +5,8 @@ title: 'First, say hello'
 author: jeanbahnik
 excerpt: Analogies and stories to help you bridge the communication gap between engineering teams and the business.
 # thumbnail:
-categories:
-  - landing-page
+# categories:
+#   - landing-page
 published: true
 visible: false
 ---
