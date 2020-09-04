@@ -7,6 +7,7 @@ excerpt: An iOS app that helps you pick the best running gear for the current we
 thumbnail: /assets/images/gtr-thumbnail.png # 1000x850, device 750 high
 categories:
   - Portfolio
+visible: true
 ---
 No longer available on the App Store.  
 [See the code on Github][link2]

@@ -8,6 +8,7 @@ thumbnail:
 categories:
   - Portfolio
 published: false
+visible: true
 ---
 This is not one of those "How I made $1,000,000 writing a book in 3 days" article. It's not an how-to at all. This is what I learned writing the first draft of a fiction after years of wanting to do this. Because I think the revealing exercise would be immensely valuable to anyone wanting to write a book. So yeah, the advice is as simple as "just do it", but not for the reasons you think. Just do it because you will learn a lot about your journey after trying. Here are my findings.
 

@@ -7,6 +7,7 @@ excerpt: An iPhone app for Trunk Club's employees
 thumbnail: /assets/images/tc-employee-thumbnail.png
 categories:
   - Portfolio
+visible: true
 ---
 The first app I built at TC by myself, to learn Objective-C and iOS. I rewrote this app when Swift came out to learn it. With this app, Trunk Club employees can find someone, update their personal information. The app also lets you buy and use coffee tokens for our coffee bar. I built a companion Barista app that lets baristas charge employees using a barcode scanner attached to an iPod Touch.
 

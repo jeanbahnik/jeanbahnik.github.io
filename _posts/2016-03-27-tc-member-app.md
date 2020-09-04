@@ -7,6 +7,7 @@ excerpt: An iOS app for Trunk Club's customers
 thumbnail: /assets/images/tc-member-thumbnail.png
 categories:
   - Portfolio
+visible: true
 ---
 [Download on the App Store][link4]
 
