@@ -21,4 +21,6 @@ visible: false
 * Be a **successful advocate for best engineers practices**
 * **Build long-lasting relationships** with PMs, designers and stakeholders
 
-{% include book-email-subscription.html %}
+<br/>
+Send me your email address and I'll let you know when it's ready!
+<script async data-uid="bca45d43f1" src="https://dedicated-painter-8354.ck.page/bca45d43f1/index.js"></script>
