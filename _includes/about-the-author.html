@@ -1,7 +1,9 @@
-<div style="padding: 0em 1em;">
-    <!-- <div>
-        <img src="/assets/images/jean.jpg" class="site-logo-img align-left">
-    </div> -->
+<div class="wrap">
+    {% if site.logo %}
+        <a href="{{ '/' | relative_url }}" class="site-logo" rel="home" title="{{ site.title }}">
+        <img src="{{ site.logo | relative_url }}" class="site-logo-img animated fadeInDown" alt="{{ site.title }}">
+        </a>
+    {% endif %}
     <div>
         <p style="margin-bottom: 7px;"><strong>About the author</strong></p>
         <p style="margin-bottom: 15px;">
