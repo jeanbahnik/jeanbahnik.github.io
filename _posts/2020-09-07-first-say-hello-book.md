@@ -12,7 +12,7 @@ visible: false
 ---
 ![cover](/assets/images/first-say-hello-book-cover.png){: .align-right}
 
-*First, say hello* is a short book of analogies and stories from engineers, intended to help you work with non-engineers. Learn from engineers how to get your point across effectively, how to convince stakeholders of your ideas, and finally get the business to agree to invest in that tech debt work or architecture project you and your team need to tackle. Through analogies and stories of peers, you will learn to communicate the challenges of software development with the business side, to deliver projects through better collaboration, and to build long-lasting relationships that will help your career.
+*First, say hello* is a short book of analogies to help engineers work with the rest of the business. Learn from engineers how to get your point across effectively, how to convince stakeholders of your ideas, and finally get the business to agree to invest in that tech debt work or architecture project you and your team need to tackle. Through analogies and stories of peers, you will learn to communicate the challenges of software development with the business side, to deliver projects through better collaboration, and to build long-lasting relationships that will help your career.
 
 * **Get buy-in** for your ideas
 * Improve your **communication skills**
