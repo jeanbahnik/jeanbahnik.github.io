@@ -10,7 +10,7 @@ excerpt: I'm starting to work on a book project called Tech Debt Is Like...
 published: true
 visible: true
 ---
-Today I'm publishing the landing page for my first book project: [Tech Debt Is Like...]({% post_url 2020-09-07-tech-debt-is-like-book %}). I hope this book will help engineers get their point across effectively, convince stakeholders of their ideas, collaborate with product, design and other groups, and get the business to invest in that tech debt work or architecture project their team needs to tackle.
+Today I'm publishing the landing page for my first book project: [Tech Debt Is Like...]({% post_url 2020-09-15-tech-debt-is-like-book %}). I hope this book will help engineers get their point across effectively, convince stakeholders of their ideas, collaborate with product, design and other groups, and get the business to invest in that tech debt work or architecture project their team needs to tackle.
 
 This is the first time I'm working on a project in public. I'll be following @adamwathan's [recipe](https://adamwathan.me/the-book-launch-that-let-me-quit-my-job/) that he borrowed from Authority from @nathanbarry. The thing that pushed me to start (after years of wanting to) was Adam's friend's idea of a tripwire product, something small to get some experience launching a project and make a bigger project feel a lot more doable.
 
