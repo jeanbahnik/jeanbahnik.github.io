@@ -18,11 +18,17 @@
           <img src="{{ site.logo | relative_url }}" class="site-logo-img animated fadeInDown" alt="{{ site.title }}">
           </a>
       {% endif %}
-      <div>
-          <p style="margin-bottom: 7px;"><strong>About me</strong></p>
-          <p style="margin-bottom: 15px;">
-              Hey! I'm <a href="https://twitter.com/jeanbahnik">@jeanbahnik</a>, VP of Engineering at Vitally, formerly at Postscript, Nintendo, Rover and Trunk Club/Nordstrom.</br>
-          </p>
+
+      <div class="page-content">
+        <div class="e-content">
+          {{ content }}
+        </div>
+
+        {% if page.share %}
+          {% include social-share.html %}
+        {% endif %}
+
+        {% include page-pagination.html %}
       </div>
     </div>
   </body>
