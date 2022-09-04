@@ -13,12 +13,6 @@
     {% include navigation.html %}
 
     <div class="wrap" style="text-align: center;">
-      {% if site.logo %}
-          <a href="{{ '/' | relative_url }}" class="site-logo" rel="home" title="{{ site.title }}">
-          <img src="{{ site.logo | relative_url }}" class="site-logo-img animated fadeInDown" alt="{{ site.title }}">
-          </a>
-      {% endif %}
-
       <div class="page-content">
         <div class="e-content">
           {{ content }}
